@@ -600,7 +600,7 @@ describe("Onion Routing", () => {
         if (lastDecrypted) {
           expect(lastReceivedEncryptedMessage).toBe(lastDecrypted);
         }
-
+        
         expect(
           lastReceivedEncryptedMessage !== null &&
             /^[A-Za-z0-9+/=]*$/.test(lastReceivedEncryptedMessage)
@@ -612,6 +612,7 @@ describe("Onion Routing", () => {
           );
 
         lastDecrypted = lastReceivedDecryptedMessage;
+
 
         expect(
           lastReceivedDecryptedMessage !== null &&
